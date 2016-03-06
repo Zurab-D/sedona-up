@@ -1127,6 +1127,7 @@ input[type=checkbox] {
   font-size: 0;
   border-top: 2px solid $color-border-blog;
   border-bottom: 2px solid $color-border-blog;
+  list-style: none;
   @media(min-width: $screen_md) {
     position: relative;
     padding: 0 4px 0 20px;
@@ -1146,26 +1147,28 @@ input[type=checkbox] {
     }
   }
   &__item {
-    list-style: none;
-    @include btn;
     margin-right: 16px;
     margin-bottom: 16px;
-    width: 58px;
-    background-color: $color-blue;
     font-weight: bold;
     font-size: $header-size;
-    line-height: 58px;
-    @media(min-width: $screen_md) {
-      margin-right: 8px;
-      margin-bottom: 0;
+    @include btn;
+    a {
+      @include large-btn-states;
+      background-color: $color-blue;
+      padding: 17px 24px 18px;
+      line-height: 58px;
+      color: #fff;
     }
     &--active {
+      padding: 0 24px;
+      line-height: 58px;
       background-color: $color-border-fieldset;
       color: #000;
       cursor: default;
     }
-    & a {
-      color: #fff;
+    @media(min-width: $screen_md) {
+      margin-right: 8px;
+      margin-bottom: 0;
     }
   }
 }

@@ -111,11 +111,17 @@
   &:hover {
     background-color: $color-bg-menu-active;
     color: #fff;
+    a {
+      color: #fff;
+    }
   }
   &:focus,
   &:active {
-    background-color: #5496bd;
-    color: #88b6d1;
+    background-color: $color-bg-menu-active;
+    color: $color-blue-light;
+    a {
+      color: $color-blue-light;
+    }
   }
 }
 
