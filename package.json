@@ -1,0 +1,43 @@
+{
+  "name": "86410-pink",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Обучающий проект «pink» от HTML Academy",
+  "author": "Диаконашвили Зураб",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/up-htmlacademy/86410-pink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/up-htmlacademy/86410-pink/issues"
+  },
+  "homepage": "https://github.com/up-htmlacademy/86410-pink",
+  "dependencies": {
+    "autoprefixer": "6.1.x",
+    "grunt": "0.4.x",
+    "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-copy": "0.8.x",
+    "grunt-contrib-watch": "0.6.x",
+    "grunt-lintspaces": "0.7.x",
+    "grunt-postcss": "0.7.x",
+    "grunt-sass": "1.1.x",
+    "husky": "0.10.x",
+    "load-grunt-tasks": "3.3.x"
+  },
+  "scripts": {
+    "test": "grunt lintspaces:codestyle",
+    "start": "grunt watch"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  },
+  "devDependencies": {
+    "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-uglify": "^0.9.2",
+    "moment": "^2.10.6",
+    "mustache": "^2.2.0"
+  }
+}

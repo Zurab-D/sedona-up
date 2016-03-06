@@ -1,0 +1,133 @@
+/* миксины */
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+/* Центрировать по вертикали текст в блоке (например в пункте меню) */
+@mixin text-center-vertical ($block-height, $line-height) {
+  padding-top: ($block-height - $line-height) / 2;
+  padding-bottom: ($block-height - $line-height) / 2;
+}
+
+
+
+/* Вычислить паддинг между двумя блоками зная требуемое расстояние между ними */
+@mixin padding-between-blocks ($height-required, $font-size-1, $lign-height-1, $font-size-2, $lign-height-2, $top-or-bottom: bottom, $margin-or-padding: padding) {
+//   params:
+//    $height-required = #{$height-required}
+//    $font-size-1 = #{$font-size-1}
+//    $lign-height-1 = #{$lign-height-1}
+//    $font-size-2 = #{$font-size-2}
+//    $lign-height-2 = #{$lign-height-2}
+//    $top-or-bottom = #{$top-or-bottom}
+//    round($font-size-1 / 10) = #{round($font-size-1 / 10)}
+//    round($font-size-2 / 10) = #{round($font-size-2 / 10)}
+
+  #{$margin-or-padding}-#{$top-or-bottom}: floor($height-required - ($lign-height-1 - $font-size-1) / 2 - ($lign-height-2 - $font-size-2) / 2 - round($font-size-1 / 10) / 2 - round($font-size-2 / 10) / 2);
+}
+
+
+
+/* Вычислить паддинг между первой/последней строкой и верхним/нижним краем блока */
+@mixin padding-to-edge ($height-required, $font-size, $lign-height, $top-or-bottom: bottom, $margin-or-padding: padding) {
+  @include padding-between-blocks ($height-required, $font-size, $lign-height, 0, 0, $top-or-bottom, $margin-or-padding);
+}
+
+
+
+/* Обертка для отталкивания слева-справа */
+@mixin wrapper($margin-or-padding: padding, $size: 20px) {
+  #{$margin-or-padding}-left: $size;
+  #{$margin-or-padding}-right: $size;
+}
+
+
+
+@mixin btn {
+  display: inline-block;
+  vertical-align: top;
+  outline: none;
+  border: none;
+  border-radius: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  & a{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+
+
+@mixin btn-wide(
+  $padding: 18px,
+  $font-size: $header-alt-size,
+  $line-height: $header-height
+) {
+  @include btn;
+  padding-top: $padding + 1;
+  padding-bottom: $padding;
+  width: 100%;
+  font-weight: bold;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+
+
+@mixin input {
+  padding: 0 22px;
+  height: 60px;
+  border: 4px solid $color-bg-input;
+  background: $color-bg-input;
+  font-weight: bold;
+  font-size: $header-size;
+  line-height: 56px;/*height - border*/ //$header-height;
+  outline: none;
+}
+
+
+
+@mixin outline {
+  outline: 1px solid lime;
+}
+
+
+
+@mixin large-btn-states {
+  &:hover {
+    background-color: $color-bg-menu-active;
+    color: #fff;
+  }
+  &:focus,
+  &:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+  }
+}
+
+
+
+@mixin menu-item-states {
+  &:hover {
+    background-color: #fff;
+    color: $color-blue;
+  }
+  &:active {
+    background-color: #fff;
+    color: #b2b2b2;
+  }
+}

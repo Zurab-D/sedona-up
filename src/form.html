@@ -1,0 +1,313 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body class="veiled-">
+  <div class="main-overlay">
+    <!--[if lt IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <!--<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width: 0; height: 0">-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="minus" viewBox="0 0 32 32">
+        <path d="M0 13v6c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1h-30c-0.552 0-1 0.448-1 1z"></path>
+      </symbol>
+
+      <symbol id="plus" viewBox="0 0 32 32">
+        <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+      </symbol>
+    </svg>
+
+
+    <header class="header  header--form">
+      <nav class="nav"> <!-- nav--expand -->
+        <div class="nav__btn"><span>Menu</span></div>
+        <ul class="nav__ul">
+          <li class="nav__li"><a href="form.html">Карта штата</a></li>
+          <li class="nav__li"><a href="blog.html">Информация</a></li>
+          <li class="nav__li"><a href="post.html">Фото и видео</a></li>
+          <li class="nav__li"><a href="#hotels">Гостиницы</a></li>
+        </ul>
+        <div class="nav__logo-panel">
+          <a class="nav__logo" href="index.html">Главная</a>
+        </div>
+      </nav>
+      <div class="big-pic"></div>
+    </header>
+
+
+
+    <main class="main  main--form">
+      <h1 class="title">Оставьте свой отзыв</h1>
+      <p class="subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
+
+      <form action="#" method="post">
+        <fieldset class="fieldset  fieldset--fio">
+          <h2 class="fieldset__header">Представьтесь, пожалуйста:</h2>
+          <div class="fieldset__wrapper">
+            <div class="input-block">
+              <label class="input-block__label" for="name_last">Фамилия:<span class="input-block__star"> *</span></label>
+              <input class="input-block__input" type="text" id="name_last" name="name_last" required>
+            </div>
+            <div class="input-block">
+              <label class="input-block__label" for="name_first">Имя:<span class="input-block__star"> *</span></label>
+              <input class="input-block__input" type="text" id="name_first" name="name_first" required>
+            </div>
+            <div class="input-block">
+              <label class="input-block__label" for="name_father">Отчество:</label>
+              <input class="input-block__input" type="text" id="name_father" name="name_father">
+            </div>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset class="fieldset  fieldset--impress">
+          <h2 class="fieldset__header">Ваше общее впечатление</h2>
+          <div class="fieldset__wrapper">
+            <input type="radio" id="impress_ok" name="impress" checked>
+            <label class="radio-label" for="impress_ok">Скорее положительное</label>
+
+            <input type="radio" id="impress_bad" name="impress">
+            <label class="radio-label" for="impress_bad">Скорее отрицательное</label>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset class="fieldset  fieldset--date">
+          <h2 class="fieldset__header">Даты вашей поездки</h2>
+          <div class="fieldset__wrapper">
+            <div class="input-block  input-block--required">
+              <label class="input-block__label" for="date_checkin">дата приезда<span class="input-block__star"> *</span></label>
+              <input class="input-block__input" type="text" id="date_checkin" name="date_checkin" pattern="\d{1,2}\.\d{1,2}\.\d{4}" value="01.04.2016" required>
+            </div>
+            <div class="input-block  input-block--required">
+              <label class="input-block__label" for="days">Дней пребывания<span class="input-block__star"> *</span></label>
+              <div class="calc calc--days" data-label="дн.">
+                <button class="calc__button  calc__button--minus" type="button">
+                  <svg class="calc__sign-minus"><use xlink:href="#minus"></use></svg>-
+                </button>
+                <input class="calc__input" type="text" id="days" pattern="\d{1,2}" value="10" name="days">
+                <button class="calc__button  calc__button--plus" type="button">
+                  <svg class="calc__sign-plus"><use xlink:href="#plus"></use></svg>+
+                </button>
+              </div>
+            </div>
+            <div class="input-block  input-block--required">
+              <label class="input-block__label" for="date_checkout">Дата отъезда<span class="input-block__star"> *</span></label>
+              <input class="input-block__input" type="text" id="date_checkout" name="date_checkout" disabled required>
+            </div>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset class="fieldset  fieldset--travellers">
+          <h2 class="fieldset__header">Кол-во путешественников</h2>
+          <div class="input-block  input-block--calc">
+            <label class="input-block__label" for="travellers">Кол-во путешественников</label>
+            <div class="calc calc--travellers" data-label="чел.">
+              <button class="calc__button  calc__button--minus" type="button">
+                <svg class="calc__sign-minus"><use xlink:href="#minus"></use></svg>-
+              </button>
+              <input class="calc__input" type="text" id="travellers" name="travellers">
+              <button class="calc__button  calc__button--plus" type="button">
+                <svg class="calc__sign-plus"><use xlink:href="#plus"></use></svg>+
+              </button>
+            </div>
+          </div>
+
+          <div class="traveller">
+            <div class="traveller__no">
+              <div class="input-block">
+                <p class="input-block__label">№</p>
+                <p class="input-block__input">1</p>
+              </div>
+            </div>
+            <div class="traveller__fio">
+              <div class="input-block  input-block--required">
+                <label class="input-block__label" for="traveller_name_last_1">Фмилия:<span class="input-block__star"> *</span></label>
+                <input class="input-block__input" type="text" name="traveller_name_last_1" id="traveller_name_last_1">
+              </div>
+              <div class="input-block  input-block--required">
+                <label class="input-block__label" for="traveller_name_first_1">Имя:<span class="input-block__star"> *</span></label>
+                <input class="input-block__input" type="text" name="traveller_name_first_1" id="traveller_name_first_1">
+              </div>
+              <div class="input-block">
+                <label class="input-block__label" for="traveller_name_father_1">Отчество:</label>
+                <input class="input-block__input" type="text" name="traveller_name_father_1" id="traveller_name_father_1">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset class="fieldset  fieldset--places">
+          <h2 class="fieldset__header">Посещенные
+    достопримечательности</h2>
+
+          <div class="fieldset__wrapper">
+            <div class="input-block">
+              <input type="checkbox" id="place_bridge" name="place_bridge" checked>
+              <label class="checkbox-label" for="place_bridge">Мост Дьявола</label>
+            </div>
+
+            <div class="input-block">
+              <input type="checkbox" id="place_park" name="place_park">
+              <label class="checkbox-label" for="place_park">Слайд-парк</label>
+            </div>
+
+            <div class="input-block">
+              <input type="checkbox" id="place_mountain" name="place_mountain" checked>
+              <label class="checkbox-label" for="place_mountain">Гора-Колокол</label>
+            </div>
+
+            <div class="input-block">
+              <input type="checkbox" id="place_rocks" name="place_rocks" checked>
+              <label class="checkbox-label" for="place_rocks">Красные скалы</label>
+            </div>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset class="fieldset  fieldset--photos">
+          <h2 class="fieldset__header">Загрузите фотографии</h2>
+          <input type="file" id="input_file" multiple>
+          <label class="file-label" for="input_file"><span class="file-label__text">Выбрать фотографии:</span><span class="file-label__text  file-label__text--desktop">Перетащите фотографии сюда</span></label>
+          <div class="upload-pics">
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-686.jpg" alt="img-686.jpg" title="img-686.jpg">
+              <span class="upload-pics__item-label">img-686.jpg</span>
+            </div>
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-687.jpg" alt="img-687.jpg" title="img-687.jpg">
+              <span class="upload-pics__item-label">img-687.jpg</span>
+            </div>
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-688.jpg" alt="img-688.jpg" title="img-688.jpg">
+              <span class="upload-pics__item-label">img-688.jpg</span>
+            </div>
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-689.jpg" alt="img-689.jpg" title="img-689.jpg">
+              <span class="upload-pics__item-label">img-689.jpg</span>
+            </div>
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-690.jpg" alt="img-690.jpg" title="img-690.jpg">
+              <span class="upload-pics__item-label">img-690.jpg</span>
+            </div>
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-691.jpg" alt="img-691.jpg" title="img-691.jpg">
+              <span class="upload-pics__item-label">img-691.jpg</span>
+            </div>
+            <div class="upload-pics__item">
+              <a href="#pic-del" class="upload-pics__item-del">×</a>
+              <img src="./img/upload-foto/img-691.jpg" alt="img-691.jpg" title="img-691.jpg">
+              <span class="upload-pics__item-label">img-691.jpg</span>
+            </div>
+          </div>
+        </fieldset>
+
+
+
+        <div class="wrapper">
+          <button class="btn-sumbit" type="submit">отправить отзыв</button>
+        </div>
+      </form>
+    </main>
+
+
+
+    <section class="modal  modal--error"> <!-- для показа формы: modal--show -->
+      <h2 class="modal__header">Что-то пошло не так!</h2>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal__footer">
+        <button class="modal__btn">Ok</button>
+      </div>
+    </section>
+
+
+
+    <section class="modal"> <!-- для показа формы: modal--show -->
+      <h2 class="modal__header">Ваш отзыв отправлен!</h2>
+      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <div class="modal__footer">
+        <button class="modal__btn">Закрыть окно</button>
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <div class="hidden">
+        <svg version="1.0" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+        <g id="W6EeEF_1_">
+          <g>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
+              c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
+              c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
+              c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
+              c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
+              c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
+          </g>
+        </g>
+        </svg>
+        <svg version="1.0" id="youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+          <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
+          C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
+        </svg>
+        <svg version="1.0" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+          <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
+          H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
+          C5.765,5.069,5.75,3.709,6.275,3.356z"/>
+        </svg>
+      </div>
+
+
+      <a class="footer__link  footer__link--home" href="index.html">#visitsedona</a>
+
+
+      <ul class="socials  socials--footer">
+        <li class="socials__item"><a href="#tw"><svg class="socials__item-img  socials__item-img--tw"><use xlink:href="#twitter"></use></svg></a>Twitter</li>
+        <li class="socials__item"><a href="#fb"><svg class="socials__item-img  socials__item-img--fb"><use xlink:href="#facebook"></use></svg></a>Facebook</li>
+        <li class="socials__item"><a href="#yu"><svg class="socials__item-img  socials__item-img--yu"><use xlink:href="#youtube"></use></svg></a>Youtube</li>
+      </ul>
+
+
+      <a class="footer__link  footer__link--developed" href="http://www.htmlacademy.ru">
+        <svg class="htmlacademy-logo" version="1.0" id="htmlacademy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+        </svg>
+        Разработано
+      </a>
+    </footer>
+
+
+
+    <script src="js/script.min.js"></script>
+  </div>
+</body>
+</html>

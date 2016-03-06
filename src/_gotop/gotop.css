@@ -1,0 +1,11 @@
+#gotop {
+    position:fixed;
+    width:41px;
+    height:41px;
+    right:7px;
+    bottom:20px;
+    display:block;
+    background:url('gotop.png') no-repeat;
+    z-index:9998;
+    display:none;
+}

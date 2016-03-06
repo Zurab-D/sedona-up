@@ -1,0 +1,278 @@
+/* Меню */
+.nav {
+  position: relative;
+  &__btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 23px;
+    height: 22px;
+    font-size: 0;
+    border-width: 0;
+    cursor: pointer;
+    z-index: $z-index-nav-btn;
+    @media (min-width: $screen_md) {
+      display: none;
+    }
+    &:before,
+    &:after {
+      transition: .2s;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-blue;
+    }
+    &:before {
+      top: 0;
+    }
+    & span {
+      transition: .2s;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-blue;
+      width: 100%;
+      height: 4px;
+    }
+    &:hover span {
+      background-color: darken($color-blue, 20);
+    }
+    &:hover {
+      &:before,
+      &:after {
+        background-color: darken($color-blue, 20);
+      }
+    }
+  }
+  &--expand {
+    @media (max-width: $screen_md - 1){
+      .nav__btn {
+        &:before,
+        &:after {
+          top: 50%;
+          left: -2px;
+          left: -9%;
+          width: 27px;
+          width: 117%;
+          background-color: #fff;
+          transform-origin: center;
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &:after {
+          transform: translateY(-50%) rotate(-45deg);
+        }
+        & span {
+          display: none;
+        }
+        &:hover:before,
+        &:hover:after {
+          background-color: darken($color-blue, 30);
+        }
+        &:active:before,
+        &:active:after {
+          background-color: darken($color-blue, 30);
+        }
+      }
+      .nav__ul {
+        height: $mobile-menu-item-height * 4;
+      }
+    }
+  }
+  &__ul {
+    height: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: height .4s;
+    @media (min-width: $screen_md) {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: $nav-height;
+      z-index: $z-index-nav;
+    }
+  }
+  &__li {
+    width: 100%;
+    height: $mobile-menu-item-height;
+    background-color: $color-blue;
+    text-align: center;
+    border-bottom: 1px solid $mobile-menu-border-bottom-color;
+    border-top: 1px solid $mobile-menu-border-top-color;
+    @media (min-width: $screen_md) {
+      display: inline-block;
+      border: none;
+      width: 20%;
+      background-color: #fff;
+      order: 0;
+      &:first-of-type {
+        margin-left: 10%;
+        order: 1;
+      }
+      &:nth-of-type(3) {
+        margin-right: 10%;
+      }
+      &:last-of-type {
+        order: 2;
+      }
+    }
+    & a {
+      &:hover {
+        background-color: $color-bg-menu-hover;
+      }
+      &:active {
+        background-color: $color-bg-menu-active;
+        color: $color-blue-light;
+      }
+      transition: .1s;
+      display: block;
+      @include text-center-vertical ($mobile-menu-item-height, $header-height);
+      font-weight: bold;
+      font-size: $header-size;
+      line-height: $header-height;
+      color: #fff;
+      text-decoration: none;
+      @media (min-width: $screen_md) {
+        display: inline-block;
+        flex-grow: 1;
+        width: 100%;
+        background-color: #fff;
+        font-size: $base-size;
+        color: #000;
+        @include menu-item-states;
+      }
+    }
+    &:first-child {
+      border-top: none;
+    }
+    &:last-child {
+      position: relative;
+      border-bottom: none;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 4px;
+        box-shadow: 0 -2px 4px 0 rgba(0,0,0,.2);
+        @media (min-width: $screen_md) {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  &__logo-panel {
+    position: relative;
+    height: $nav-height;
+  }
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 137px;
+    height: $nav-height;
+    font-size: 0;
+    z-index: $z-index-nav;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:before {
+      width: 137px;
+      height: 71px;
+      background: url(../img/form-logo-triangle.svg) no-repeat;
+      background-size: 137px 70px;
+    }
+    &:after {
+      width: 67px;
+      height: 56px;
+      background: url(../img/logo-sedona@1x.png) no-repeat;
+    }
+  }
+}
+
+
+
+.big-pic {
+  position: relative;
+  overflow: hidden;
+  height: 160px;
+  background:
+    url(../img/text-sedona.svg) no-repeat,
+    url(../img/intro-triangle.svg) no-repeat,
+    url(../img/photo-background@1x.jpg) no-repeat
+  ;
+  background-size:
+    175px auto,
+    cover,
+    cover
+  ;
+  background-position:
+    center 50.4%,
+    center bottom,
+    center 40%
+  ;
+  @media(min-width: $screen_md) {
+    height: 290px;
+    background-size: 60% auto, contain, cover;
+    background-position: center 49%, center bottom, center 55%;
+  }
+  @media(min-width: $screen_lg) {
+    height: 302px;
+    background-size: 39% auto, contain, cover;
+    background-position: center 45%, center bottom, center 65%;
+  }
+  .header--index & {
+    height: 390px;
+    background:
+      url(../img/text-welcome.svg) no-repeat,
+      url(../img/text-tothegorgeous.svg) no-repeat,
+      url(../img/text-sedona.svg) no-repeat,
+      url(../img/text-becausecanyon.svg) no-repeat,
+      url(../img/intro-triangle.svg) no-repeat,
+      url(../img/photo-background@1x.jpg) no-repeat
+    ;
+    background-size: 144px auto, 196px auto, 284px auto, 197px auto, cover, auto 135%;
+    background-position:
+      center 13.7%,
+      center 25%,
+      center 50.4%,
+      center 85.7%,
+      center bottom,
+      center 7%
+    ;
+    @media (min-width: $screen_md) {
+      height: 512px;
+      width: 100%;
+      background-size: 144px auto, 196px auto, 284px auto, 197px auto, contain, cover;
+      background-position:
+        center 13.7%,
+        center 25%,
+        center 50.4%,
+        center 85.7%,
+        center bottom,
+        center 30%;
+    }
+  }
+  /*.header--form & {
+    height: 160px;
+    background:
+      url(../img/text-sedona.svg) no-repeat center 50.4%,
+      url(../img/intro-triangle.svg) no-repeat center bottom,
+      url(../img/photo-background@1x.jpg) no-repeat center
+    ;
+    background-size: 175px auto, cover, cover;
+  }*/
+}

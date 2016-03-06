@@ -1,0 +1,26 @@
+{
+  "name": "86410-sedona",
+  "description": "Обучающий проект «sedona» от HTML Academy",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Диаконашвили Зураб"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Zurab-D/86410-sedona",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tap.js": "~2.1.2",
+    "lodash": "~3.10.1",
+    "moment": "~2.11.0",
+    "mustache.js": "mustache#~2.2.1",
+    "jquery": "~2.2.0"
+  }
+}

@@ -1,0 +1,56 @@
+html { box-sizing: border-box; }
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  transition: 0.1s;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: $base-size;
+  line-height: $base-height;
+  background-color: $color-bg-input;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+svg {
+  transition: fill .015s;
+}
+
+.main-overlay {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  @media(min-width: $screen_md) {
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, .15);
+  }
+}
+
+.outline {
+  outline: 1px solid red;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  outline: none;
+  border: none;
+  border-radius: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
