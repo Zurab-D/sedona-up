@@ -4,6 +4,7 @@ _arc/
 _doc/
 bower_components/
 node_modules/
+css/
 *.log
 *.rar
 *.sublime*
