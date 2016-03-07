@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 50px;
+  padding-top: 35px;//50px;
   @include padding-to-edge (35px, $header-alt-size, $header-height);
   @media(min-width: $screen_md) {
     display: flex;
@@ -93,7 +93,7 @@
   padding: 0;
   list-style: none;
   @include padding-to-edge (40px, $header-alt-size, $header-height, top);
-  @include padding-to-edge (40px, $header-alt-size, $header-height);
+  @include padding-to-edge (50px, $header-alt-size, $header-height);
   @media(min-width: $screen_md) {
     margin: 0;
     padding: 0;

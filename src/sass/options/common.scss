@@ -54,3 +54,9 @@ input[type="radio"],
 input[type="checkbox"] {
   display: none;
 }
+
+.show-on-md {
+  @media(max-width: $screen_md - 1) {
+    display: none;
+  }
+}

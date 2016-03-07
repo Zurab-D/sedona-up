@@ -256,14 +256,10 @@
     @media (min-width: $screen_md) {
       height: 512px;
       width: 100%;
-      background-size: 144px auto, 196px auto, 284px auto, 197px auto, contain, cover;
-      background-position:
-        center 13.7%,
-        center 25%,
-        center 50.4%,
-        center 85.7%,
-        center bottom,
-        center 30%;
+      //background-size: 144px auto, 196px auto, 284px auto, 197px auto, contain, cover;
+      background-size: 194px auto, 265px auto, 470px auto, 290px auto, contain, cover;
+      //background-position: center 13.7%, center 25%, center 50.4%, center 85.7%, center bottom, center 30%;
+      background-position: center 16%, center 27.4%, center 49%, center 80%, center bottom, center 30%;
     }
   }
   /*.header--form & {
