@@ -100,8 +100,9 @@
     @media (min-width: $screen_md) {
       display: flex;
       flex-direction: column;
-      padding-left: 0;
-      width: 168px;
+      //padding-left: 0;
+      padding: 0 35px;
+      //width: 168px;
       text-align: center;
     }
     &:first-child .features__header {
@@ -134,8 +135,8 @@
         background-size: 148px;
         background-position: -1px -196px;
         @media (min-width: $screen_md) {
-          top: 54px;
-          width: 75px;
+          top: 60px;
+          width: 77px;
           height: 72px;
           background-position: 0 -405px;
           background-size: 305px;
@@ -155,8 +156,8 @@
         background-size: 152px;
         background-position: 0 -163px;
         @media (min-width: $screen_md) {
-          top: 50px;
-          width: 75px;
+          top: 56px;
+          width: 68px;
           height: 76px;
           background-position: 0 -328px;
           background-size: 305px;
@@ -172,8 +173,8 @@
         background-size: 152px;
         background-position: 0 -96px;
         @media (min-width: $screen_md) {
-          top: 56px;
-          width: 75px;
+          top: 60px;
+          width: 80px;;
           height: 70px;
           background-position: 0 -193px;
           background-size: 305px;
@@ -203,6 +204,10 @@
     @media (min-width: $screen_md) {
       padding: 0;
     }
+    @media(min-width: $screen_lg) {
+      @include wrapper($size: 8%);
+      padding-bottom: 82px;
+    }
   }
 }
 
@@ -217,11 +222,14 @@
     top: 49.5%;//50%;
     left: 47.5%;//50%;
     transform: translate(-50%, -50%);
-    height: auto;
-    width: 160%;//auto;
+    height: 460px;
+    width: auto;
     @media(min-width: $screen_md) {
       /*width: 100%;*/
       height: auto;
+    }
+    @media(min-width: $screen_lg) {
+      height: 460px;
     }
     &-cover {
       position: relative;
@@ -248,6 +256,9 @@
     @media (min-width: $screen_md) {
       background-image: none;
     }
+    @media (min-width: $screen_lg) {
+      padding-top: 0;
+    }
   }
   &--bridge .advantage {
     order: 1;
@@ -257,15 +268,6 @@
 
 
 .advantage {
-  &__wrap {
-    display: none;
-    @media(min-width: $screen_md) {
-      display: inline;
-    }
-    @media(min-width: 1005px) {
-      display: none;
-    }
-  }
   @media(min-width:$screen_md) {
     padding: 0 35px;
     min-height: 256px;
@@ -308,9 +310,13 @@
     @include padding-to-edge (45px, $base-size, $base-height, top);
     @include padding-between-blocks (18px, $header-size, $header-height, $base-size, $base-height);
     @media(min-width:$screen_md) {
-      @include padding-to-edge (34px, $base-size, $base-height, top);
-      @include wrapper($size: 10%);
+      @include padding-to-edge (50px, $base-size, $base-height, top);
+      @include wrapper($size: 9%);
       font-size: $header-alt-size;
+    }
+    @media(min-width:$screen_lg) {
+      @include padding-to-edge (57px, $base-size, $base-height, top);
+      @include wrapper($size: 27%);
     }
   }
   &__num, &__text {
@@ -333,6 +339,9 @@
       padding: 0;
       @include wrapper($size: 5%);
     }
+    @media(min-width: $screen_lg) {
+      @include wrapper($size: 8%);
+    }
     .advantages-cover .advantage:not(:last-child) & {
       border-bottom: 1px solid $color-border;
       @media(min-width: $screen_md) {
@@ -350,7 +359,7 @@
   @media(min-width: $screen_md) {
     margin-bottom: 57px;
   }
-  @media(min-width: $screen_md) {
+  @media(min-width: $screen_lg) {
     margin-bottom: 65px;
   }
   &__header {
@@ -376,11 +385,11 @@
     line-height: $search-hotel-text-height;
     @media(min-width: $screen_md) {
       @include wrapper(padding, 10px);
-      @include padding-to-edge (47px, $base-size, $search-hotel-text-height);
+      @include padding-to-edge (49px, $base-size, $search-hotel-text-height);
       margin: 0 auto;
       width: 460px;
     }
-    @media(min-width: $screen_md) {
+    @media(min-width: $screen_lg) {
       padding-bottom: 49px;
     }
   }
@@ -399,13 +408,12 @@
     @include large-btn-states;
     &--disabled,
     &--disabled:hover,
-    &--disabled:focus,
+    //&--disabled:focus,
     &--disabled:active {
       background-color: $color-border-fieldset;
       color: #fff;
     }
     @media(min-width: $screen_md) {
-      //@include wrapper(margin, 20%);
       width: 460px;
       margin: 0 auto;
     }
@@ -836,7 +844,7 @@ input[type=checkbox] {
     background-color: $color-border-fieldset;
     color: #7a7a7a;
   }
-  &:focus,
+  /* &:focus, */
   &:active {
     background-color: $color-active-ctrl;
     color: $color-active-ctrl-font;
@@ -1391,4 +1399,3 @@ input[type=checkbox] {
     }
   }
 }
-
