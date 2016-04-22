@@ -5,7 +5,6 @@ _arc/
 _doc/
 bower_components/
 node_modules/
-css/
 *.log
 *.rar
 *.sublime*
@@ -13,13 +12,10 @@ css/
 *.zip
 .DS_Store
 .idea
-css/*.css
 ex_files
 Thumbs.db
 .gitignore
 Замечания.*
 FarMenu.ini
-*.min.css
-*.min.js
 *.con
 *.!
