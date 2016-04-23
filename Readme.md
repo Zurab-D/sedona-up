@@ -10,6 +10,7 @@ Demo pages:
   * http://zurab-d.github.io/sedona-up/blog.html
   * http://zurab-d.github.io/sedona-up/post.html
   * http://zurab-d.github.io/sedona-up/404.html
+
 ---
 ---
 
