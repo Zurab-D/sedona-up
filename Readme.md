@@ -1,5 +1,5 @@
 _`(eng)`_
-# Training project Sedona [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Training project Sedona
 
 * Student: [Zurab Diakonashvili](https://htmlacademy.ru/profile/id86410).
 * Tutor: [Anton Popov](https://htmlacademy.ru/profile/joker).
