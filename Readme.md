@@ -1,3 +1,25 @@
+_`(eng)`_
+# Training project Sedona [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+
+* Student: [Zurab Diakonashvili](https://htmlacademy.ru/profile/id86410).
+* Tutor: [Anton Popov](https://htmlacademy.ru/profile/joker).
+
+Demo pages:
+  * http://zurab-d.github.io/sedona-up/index.html
+  * http://zurab-d.github.io/sedona-up/form.html
+  * http://zurab-d.github.io/sedona-up/blog.html
+  * http://zurab-d.github.io/sedona-up/post.html
+  * http://zurab-d.github.io/sedona-up/404.html
+---
+---
+
+_`(rus)`_
+# Проект «Седона»
+
+* Студент: [Диаконашвили Зураб](https://htmlacademy.ru/profile/id86410).
+* Наставник: <a href="https://htmlacademy.ru/profile/joker">Антон Попов</a>
+
+
 # Проект «Седона»
 
 * Студент: [Диаконашвили Зураб](https://htmlacademy.ru/profile/id86410).
