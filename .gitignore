@@ -20,3 +20,4 @@ FarMenu.ini
 *.con
 *.!
 src/
+.editorconfig/
