@@ -98,19 +98,34 @@ module.exports = function(grunt) {
         src: [
           "node_modules/mustache/mustache.min.js",
           "node_modules/moment/min/moment-with-locales.min.js",
+          "src/js/vendor/jquery-1.12.0.min.js",
           "src/js/googleMap.js",
+          "src/js/gotop.js",
           "src/js/script.js",
         ],
         dest: "build/js/script.js"
       },
-      watch: {
+      /*watch: {
         src: [
           "node_modules/mustache/mustache.min.js",
           "node_modules/moment/min/moment-with-locales.min.js",
           "src/js/googleMap.js",
+          "src/js/vendor/jquery-1.12.0.min.js",
+          "src/js/gotop.js",
           "src/js/script.js",
         ],
         dest: "src/js/script.con"
+      }*/
+      watch: {
+        src: [
+          "node_modules/mustache/mustache.min.js",
+          "node_modules/moment/min/moment-with-locales.min.js",
+          "src/js/vendor/jquery-1.12.0.min.js",
+          "src/js/googleMap.js",
+          "src/js/gotop.js",
+          "src/js/script.js",
+        ],
+        dest: "src/js/script.min.js"
       }
     },
 
@@ -120,11 +135,11 @@ module.exports = function(grunt) {
           "build/js/script.min.js": ["build/js/script.js"]
         }
       },
-      watch: {
+      /*watch: {
         files: {
           "src/js/script.min.js": ["src/js/script.con"]
         }
-      }
+      }*/
     },
 
     imagemin: {
@@ -155,7 +170,8 @@ module.exports = function(grunt) {
 
       script: {
         files: ["src/js/**/*.js", "!src/js/**/*.min.js"],
-        tasks: ["concat:watch", "uglify:watch"],
+        //tasks: ["concat:watch", "uglify:watch"],
+        tasks: ["concat:watch"],
         options: {
           spawn: false,
           livereload: true

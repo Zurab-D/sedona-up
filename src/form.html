@@ -10,18 +10,16 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+
+<!--   <script src="js/vendor/jquery-1.12.0.min.js"></script> -->
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body class="veiled-">
+<body>
   <div class="main-overlay">
     <!--[if lt IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-
-
     <!--<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width: 0; height: 0">-->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="minus" viewBox="0 0 32 32">
@@ -56,7 +54,7 @@
       <h1 class="title">Оставьте свой отзыв</h1>
       <p class="subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
 
-      <form action="#" method="post">
+      <form action="https://echo.htmlacademy.ru/adaptive" method="post">
         <fieldset class="fieldset  fieldset--fio">
           <h2 class="fieldset__header">Представьтесь, пожалуйста:</h2>
           <div class="fieldset__wrapper">
@@ -118,6 +116,29 @@
 
 
 
+        <script id="template_traveller" type="text/html">
+            <div class="traveller__no">
+              <div class="input-block">
+                <p class="input-block__label">№</p>
+                <p class="input-block__input">{{no}}</p>
+              </div>
+            </div>
+            <div class="traveller__fio">
+              <div class="input-block  input-block--required">
+                <label class="input-block__label" for="traveller_name_last_{{no}}">Фмилия:<span class="input-block__star"> *</span></label>
+                <input class="input-block__input" type="text" name="traveller_name_last_{{no}}" id="traveller_name_last_{{no}}">
+              </div>
+              <div class="input-block  input-block--required">
+                <label class="input-block__label" for="traveller_name_first_{{no}}">Имя:<span class="input-block__star"> *</span></label>
+                <input class="input-block__input" type="text" name="traveller_name_first_{{no}}" id="traveller_name_first_{{no}}">
+              </div>
+              <div class="input-block">
+                <label class="input-block__label" for="traveller_name_father_{{no}}">Отчество:</label>
+                <input class="input-block__input" type="text" name="traveller_name_father_{{no}}" id="traveller_name_father_{{no}}">
+              </div>
+            </div>
+        </script>
+
         <fieldset class="fieldset  fieldset--travellers">
           <h2 class="fieldset__header">Кол-во путешественников</h2>
           <div class="input-block  input-block--calc">
@@ -133,28 +154,7 @@
             </div>
           </div>
 
-          <div class="traveller">
-            <div class="traveller__no">
-              <div class="input-block">
-                <p class="input-block__label">№</p>
-                <p class="input-block__input">1</p>
-              </div>
-            </div>
-            <div class="traveller__fio">
-              <div class="input-block  input-block--required">
-                <label class="input-block__label" for="traveller_name_last_1">Фмилия:<span class="input-block__star"> *</span></label>
-                <input class="input-block__input" type="text" name="traveller_name_last_1" id="traveller_name_last_1">
-              </div>
-              <div class="input-block  input-block--required">
-                <label class="input-block__label" for="traveller_name_first_1">Имя:<span class="input-block__star"> *</span></label>
-                <input class="input-block__input" type="text" name="traveller_name_first_1" id="traveller_name_first_1">
-              </div>
-              <div class="input-block">
-                <label class="input-block__label" for="traveller_name_father_1">Отчество:</label>
-                <input class="input-block__input" type="text" name="traveller_name_father_1" id="traveller_name_father_1">
-              </div>
-            </div>
-          </div>
+          <div class="travellers-container" id="travellers_container"></div>
         </fieldset>
 
 
@@ -187,47 +187,16 @@
         </fieldset>
 
 
-
+        <script id="pic_template" type="text/html">
+          <a href="#pic-del" class="upload-pics__item-del">×</a>
+          <a class="upload-pics__item-a" href="{{img-src}}" target="_blank"><img src="{{img-src}}" alt="{{img-alt}}" title=""></a>
+          <span class="upload-pics__item-label">{{img-label}}</span>
+        </script>
         <fieldset class="fieldset  fieldset--photos">
           <h2 class="fieldset__header">Загрузите фотографии</h2>
           <input type="file" id="input_file" multiple>
           <label class="file-label" for="input_file"><span class="file-label__text">Выбрать фотографии:</span><span class="file-label__text  file-label__text--desktop">Перетащите фотографии сюда</span></label>
           <div class="upload-pics">
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-686.jpg" alt="img-686.jpg" title="img-686.jpg">
-              <span class="upload-pics__item-label">img-686.jpg</span>
-            </div>
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-687.jpg" alt="img-687.jpg" title="img-687.jpg">
-              <span class="upload-pics__item-label">img-687.jpg</span>
-            </div>
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-688.jpg" alt="img-688.jpg" title="img-688.jpg">
-              <span class="upload-pics__item-label">img-688.jpg</span>
-            </div>
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-689.jpg" alt="img-689.jpg" title="img-689.jpg">
-              <span class="upload-pics__item-label">img-689.jpg</span>
-            </div>
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-690.jpg" alt="img-690.jpg" title="img-690.jpg">
-              <span class="upload-pics__item-label">img-690.jpg</span>
-            </div>
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-691.jpg" alt="img-691.jpg" title="img-691.jpg">
-              <span class="upload-pics__item-label">img-691.jpg</span>
-            </div>
-            <div class="upload-pics__item">
-              <a href="#pic-del" class="upload-pics__item-del">×</a>
-              <img src="./img/upload-foto/img-691.jpg" alt="img-691.jpg" title="img-691.jpg">
-              <span class="upload-pics__item-label">img-691.jpg</span>
-            </div>
           </div>
         </fieldset>
 
@@ -251,7 +220,7 @@
 
 
 
-    <section class="modal"> <!-- для показа формы: modal--show -->
+    <section class="modal  modal--success"> <!-- для показа формы: modal--show -->
       <h2 class="modal__header">Ваш отзыв отправлен!</h2>
       <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <div class="modal__footer">
@@ -304,10 +273,10 @@
         Разработано
       </a>
     </footer>
-
-
-
-    <script src="js/script.min.js"></script>
   </div>
+
+
+
+  <script src="js/script.min.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
       scrollwheel: false,
       zoom: 7,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true
+      //disableDefaultUI: true
     });
 
     var iconMarker = "img/map-marker.svg";
